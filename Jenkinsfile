@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+ environment {
+        DOCKER_API_VERSION = '1.40'
+    }
+    
     tools {
         nodejs "Node25" // Configura una instalación de Node.js en Jenkins
         dockerTool 'DockerTool'  // Cambia el nombre de la herramienta según tu configuración en Jenkins
